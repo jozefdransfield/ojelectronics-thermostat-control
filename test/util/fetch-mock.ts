@@ -63,44 +63,44 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
                                         },
                                         {
                                             'WeekDayGrpNo': 2,
@@ -110,44 +110,44 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
                                         },
                                         {
                                             'WeekDayGrpNo': 3,
@@ -157,44 +157,44 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
                                         },
                                         {
                                             'WeekDayGrpNo': 4,
@@ -204,44 +204,44 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
                                         },
                                         {
                                             'WeekDayGrpNo': 5,
@@ -251,44 +251,44 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
                                         },
                                         {
                                             'WeekDayGrpNo': 6,
@@ -298,44 +298,44 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
                                         },
                                         {
                                             'WeekDayGrpNo': 7,
@@ -345,47 +345,47 @@ export function setupFetchMock() {
                                                     'Clock': '07:00:00',
                                                     'Temperature': 3000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 1,
                                                     'Clock': '09:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 2,
                                                     'Clock': '12:00:00',
                                                     'Temperature': 2500,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 3,
                                                     'Clock': '13:00:00',
                                                     'Temperature': 2000,
                                                     'Active': false,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 4,
                                                     'Clock': '17:00:00',
                                                     'Temperature': 2500,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
+                                                    'EventIsOnNextDay': false,
                                                 },
                                                 {
                                                     'ScheduleType': 5,
                                                     'Clock': '23:00:00',
                                                     'Temperature': 2000,
                                                     'Active': true,
-                                                    'EventIsOnNextDay': false
-                                                }
-                                            ]
-                                        }
+                                                    'EventIsOnNextDay': false,
+                                                },
+                                            ],
+                                        },
                                     ],
-                                    'ModifiedDueToVerification': false
+                                    'ModifiedDueToVerification': false,
                                 },
                                 'ComfortSetpoint': 2300,
                                 'ComfortEndTime': '1900-01-01T00:00:00',
@@ -407,8 +407,8 @@ export function setupFetchMock() {
                                 'MaxSetpoint': 4000,
                                 'TimeZone': 0,
                                 'DaylightSavingActive': false,
-                                'FloorType': 1
-                            }
+                                'FloorType': 1,
+                            },
                         ],
                         'RegulationMode': 1,
                         'Schedule': {
@@ -421,44 +421,44 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
                                 },
                                 {
                                     'WeekDayGrpNo': 2,
@@ -468,44 +468,44 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
                                 },
                                 {
                                     'WeekDayGrpNo': 3,
@@ -515,44 +515,44 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
                                 },
                                 {
                                     'WeekDayGrpNo': 4,
@@ -562,44 +562,44 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
                                 },
                                 {
                                     'WeekDayGrpNo': 5,
@@ -609,44 +609,44 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
                                 },
                                 {
                                     'WeekDayGrpNo': 6,
@@ -656,44 +656,44 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
                                 },
                                 {
                                     'WeekDayGrpNo': 7,
@@ -703,47 +703,47 @@ export function setupFetchMock() {
                                             'Clock': '07:00:00',
                                             'Temperature': 3000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 1,
                                             'Clock': '09:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 2,
                                             'Clock': '12:00:00',
                                             'Temperature': 2500,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 3,
                                             'Clock': '13:00:00',
                                             'Temperature': 2000,
                                             'Active': false,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 4,
                                             'Clock': '17:00:00',
                                             'Temperature': 2500,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
+                                            'EventIsOnNextDay': false,
                                         },
                                         {
                                             'ScheduleType': 5,
                                             'Clock': '23:00:00',
                                             'Temperature': 2000,
                                             'Active': true,
-                                            'EventIsOnNextDay': false
-                                        }
-                                    ]
-                                }
+                                            'EventIsOnNextDay': false,
+                                        },
+                                    ],
+                                },
                             ],
-                            'ModifiedDueToVerification': false
+                            'ModifiedDueToVerification': false,
                         },
                         'ComfortSetpoint': 2300,
                         'ComfortEndTime': '1900-01-01T00:00:00',
@@ -754,10 +754,10 @@ export function setupFetchMock() {
                         'VacationTemperature': 500,
                         'LastPrimaryModeIsAuto': true,
                         'BoostEndTime': '1900-01-01T00:00:00',
-                        'FrostProtectionTemperature': 500
-                    }
+                        'FrostProtectionTemperature': 500,
+                    },
                 ],
-                'ErrorCode': 0
+                'ErrorCode': 0,
             });
         }
 
