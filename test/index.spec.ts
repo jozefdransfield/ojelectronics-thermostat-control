@@ -28,9 +28,9 @@ describe('The Api', async () => {
         const session = await api.session(USERNAME, PASSWORD);
 
         it('should get group contents', async () => {
-            const groupContents = await session.groupContents();
+            const groups = await session.groups();
 
-            expect(groupContents).toBeTruthy();
+            expect(groups).toBeTruthy();
         });
     });
 });
