@@ -7,33 +7,27 @@
   "description": "Library to access the OJ electronics Thermostat API",
   "author": "Jozef Dransfield",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/USERNAME/GITHUB_PROJECT_NAME#readme",
+  "homepage": "hhttps://github.com/jozefdransfield/ojelectronics-thermostat-control",
   "repository": {
     "type": "git",
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME.git"
+    "url": "https://github.com/jozefdransfield/ojelectronics-thermostat-control.git"
   },
   "bugs": {
-    "url": "https://github.com/USERNAME/GITHUB_PROJECT_NAME/issues"
+    "url": "https://github.com/jozefdransfield/ojelectronics-thermostat-control/issues"
   },
   "keywords": [
-    "homebridge-plugin"
+    "smart-home"
   ],
   "main": "dist/index.js",
-  "engines": {
-    "node": "^18.20.4 || ^20.18.0 || ^22.10.0"
-  },
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "test": "vitest"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
-    "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.8.6",
     "rimraf": "^6.0.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.12.2",
     "vitest": "^2.1.3"
   }
 }
