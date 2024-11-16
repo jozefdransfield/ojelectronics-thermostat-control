@@ -84,6 +84,7 @@ class Group {
         return this.groupContents.Thermostats.map ( (it) => {
             return {
                 name: it.ThermostatName,
+                serialNumber: it.SerialNumber,
                 floorTemperature: it.FloorTemperature / 100,
                 roomTemperature: it.RoomTemperature / 100,
                 heating: it.Heating
