@@ -64,7 +64,7 @@ class Session {
     }
 }
 
-type Thermostat = {
+export type Thermostat = {
     name: string;
     floorTemperature: number
     roomTemperature: number
@@ -72,7 +72,7 @@ type Thermostat = {
     serialNumber: string
 }
 
-class Group {
+export class Group {
     private readonly apiKey: string;
     private readonly sessionId: string;
     private groupContents: GroupContent;
