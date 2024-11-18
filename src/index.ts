@@ -69,6 +69,7 @@ type Thermostat = {
     floorTemperature: number
     roomTemperature: number
     heating: boolean
+    serialNumber: string
 }
 
 class Group {
