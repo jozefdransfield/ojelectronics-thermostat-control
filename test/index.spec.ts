@@ -1,5 +1,5 @@
 import {describe, it, expect, vi} from 'vitest';
-import {OJElectronics} from '../index';
+import {OJElectronics} from '../src';
 
 const API_KEY = '<api-key>';
 const USERNAME = '<username>';
