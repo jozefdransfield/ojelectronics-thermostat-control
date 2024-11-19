@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {OJElectronics} from '../src';
+import {OJElectronics} from '../index';
 import {setupFetchMock} from './util/fetch-mock';
 
 const API_KEY = '<api-key>';
