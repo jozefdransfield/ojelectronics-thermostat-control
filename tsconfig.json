@@ -5,7 +5,6 @@
       "DOM",
       "ES2022"
     ],
-    "rootDir": ".",
     "module": "ES2022",
     "moduleResolution": "node",
     "strict": true,
@@ -16,7 +15,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src"],
   "exclude": [
     "node_modules",
     "dist"
