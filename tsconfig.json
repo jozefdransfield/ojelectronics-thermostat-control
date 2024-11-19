@@ -5,7 +5,7 @@
       "DOM",
       "ES2022"
     ],
-    "rootDir": "src",
+    "rootDir": ".",
     "module": "ES2022",
     "moduleResolution": "node",
     "strict": true,
@@ -16,9 +16,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "eslint.config.js",
-    "homebridge-ui",
-    "src"
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
