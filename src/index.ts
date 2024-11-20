@@ -56,8 +56,6 @@ export class Session {
 
         const json = await response.json() as GroupContentsResponse;
 
-        console.log(json)
-
         return json.GroupContents.map(groupContent => new Group(this.apiKey, this.sessionId, groupContent));
     }
 }
@@ -82,7 +80,11 @@ export class Group {
                 serialNumber: it.SerialNumber,
                 floorTemperature: it.FloorTemperature / 100,
                 roomTemperature: it.RoomTemperature / 100,
-                heating: it.Heating
+                heating: it.Heating,
+                regulationMode: it.RegulationMode,
+                manualSetPoint: it.ManualModeSetpoint / 100,
+                comfortSetPoint: it.ComfortSetpoint / 100,
+                vacationTemperature: it.VacationTemperature / 100,
             }
         });
     }
@@ -165,8 +167,6 @@ export class Group {
 
         const json = await response.json();
 
-        console.log(json)
-
         if (json.ErrorCode !== 0) {
             throw new Error('Failed to update group');
         }
@@ -180,6 +180,10 @@ export type Thermostat = {
     roomTemperature: number
     heating: boolean
     serialNumber: string
+    regulationMode: RegulationMode
+    manualSetPoint: number
+    comfortSetPoint: number
+    vacationTemperature: number
 }
 
 export class Temperature {
@@ -306,7 +310,7 @@ type ThermostatResponse = {
     FloorType: number,
 }
 
-enum RegulationMode {
+export enum RegulationMode {
     Schedule = 1,
     Comfort = 2,
     Manual = 3,
