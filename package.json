@@ -2,7 +2,7 @@
   "name": "oj-electronics-thermostat",
   "displayName": "oj-electronics Thermostat API",
   "type": "module",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Library to access the OJ electronics Thermostat API",
   "author": "Jozef Dransfield",
   "license": "Apache-2.0",

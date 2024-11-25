@@ -170,11 +170,11 @@ export class Group {
         });
     }
 
-    async boostMode() {
+    async boostMode(until: Date = addHours(new Date(), 1)) {
         await this.postUpdate({
             APIKEY: this.apiKey,
             SetGroup: {
-                BoostEndTime: formatRFC3339(addHours(new Date(), 1)),
+                BoostEndTime: formatRFC3339(until),
                 GroupId: this.groupContents.GroupId,
                 RegulationMode: RegulationMode.Boost,
             }
