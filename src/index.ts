@@ -9,8 +9,8 @@ export interface HttpClient {
 class FetchHttpClient implements HttpClient {
     private readonly baseUrl: String
 
-    constructor(baseUrlL: String) {
-        this.baseUrl = baseUrlL
+    constructor(baseUrl: String) {
+        this.baseUrl = baseUrl
     }
 
     async get<T>(url: string): Promise<T> {
@@ -18,7 +18,7 @@ class FetchHttpClient implements HttpClient {
         if (response.status !== 200) {
             throw new Error(`Error response requesting ${url} ${response.status} ${response.statusText}`);
         }
-        return response as T
+        return await response.json() as T
     }
 
     async postJson<T>(url: string, obj: any): Promise<T> {
@@ -80,7 +80,7 @@ export class Session {
         params.append('sessionid', this.sessionId);
         params.append('apiKey', this.apiKey);
 
-        const response = await this.httpClient.get<GroupContentsResponse>('Group/GroupContents?' + params.toString());
+        const response = await this.httpClient.get<GroupContentsResponse>('/Group/GroupContents?' + params.toString());
 
         if (response.ErrorCode !== 0) {
             throw new Error(`Failed to get groups, with error code ${response.ErrorCode}`)
@@ -185,13 +185,10 @@ export class Group {
         const params = new URLSearchParams();
         params.append('sessionid', this.sessionId);
 
-        const response = await this.httpClient.postJson<UpdateGroupResponse>('Group/UpdateGroup?' + params.toString(), updateGroupContentRequest);
+        const response = await this.httpClient.postJson<UpdateGroupResponse>('/Group/UpdateGroup?' + params.toString(), updateGroupContentRequest);
 
-        // TODO add a test for when the api sends an invalid http status code
-
-        // TODO Add a test for this case too
         if (response.ErrorCode !== 0) {
-            throw new Error('Failed to update group');
+            throw new Error('Failed to update group with error code ' + response.ErrorCode);
         }
     }
 }
@@ -225,26 +222,6 @@ export class Temperature {
 
     static ofKelvin(kelvin: number): Temperature {
         return new Temperature(kelvin - 273.15);
-    }
-}
-
-type UpdateGroupContentRequest = {
-    APIKEY: string,
-    SetGroup: {
-        BoostEndTime: string,
-        ComfortEndTime: string,
-        ComfortSetpoint: number,
-        ExcludeVacationData: boolean,
-        GroupId: number,
-        GroupName: string,
-        LastPrimaryModeIsAuto: boolean,
-        ManualModeSetpoint: number,
-        RegulationMode: number,
-        Schedule: Schedule,
-        VactionBeginDay: string,
-        VacationEnabled: boolean,
-        VacationEndDay: string,
-        VacationTemperature: number,
     }
 }
 
