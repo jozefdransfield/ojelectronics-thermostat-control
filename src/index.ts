@@ -1,48 +1,78 @@
 import {addHours, formatRFC3339} from "date-fns";
 
-export class OJElectronics {
-    private readonly apiKey: string;
-    private readonly customerId: number;
+export interface HttpClient {
+    get<T>(url: string): Promise<T>
 
-    constructor(apiKey: string, customerId: number) {
-        this.apiKey = apiKey;
-        this.customerId = customerId;
+    postJson<T>(url: string, obj: any): Promise<T>
+}
+
+class FetchHttpClient implements HttpClient {
+    private readonly baseUrl: String
+
+    constructor(baseUrlL: String) {
+        this.baseUrl = baseUrlL
     }
 
-    async session(username: string, password: string): Promise<Session> {
-        const response = await fetch('https://owd5-OJ001-app.ojelectronics.com/api/UserProfile/SignIn', {
+    async get<T>(url: string): Promise<T> {
+        const response = await fetch(`${this.baseUrl}${url}`);
+        if (response.status !== 200) {
+            throw new Error(`Error response requesting ${url} ${response.status} ${response.statusText}`);
+        }
+        return response as T
+    }
+
+    async postJson<T>(url: string, obj: any): Promise<T> {
+        const response = await fetch(`${this.baseUrl}${url}`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                'APIKEY': this.apiKey,
-                'ClientSWVersion': 1,
-                'CustomerId': this.customerId,
-                'UserName': username,
-                'Password': password,
-            }),
+            body: JSON.stringify(obj),
         });
 
         if (response.status !== 200) {
-            throw new Error('Create Session Failed with ' + response.status + ' ' + response.statusText);
+            throw new Error(`Error response requesting ${url} ${response.status} ${response.statusText}`);
         }
 
-        const json = await response.json() as SignInResponse;
+        return await response.json() as T;
+    }
+}
+
+export class OJElectronics {
+    private readonly apiKey: string;
+    private readonly customerId: number;
+    private readonly httpClient: HttpClient;
+
+    constructor(apiKey: string, customerId: number, httpClient: HttpClient = new FetchHttpClient('https://owd5-OJ001-app.ojelectronics.com/api')) {
+        this.apiKey = apiKey;
+        this.customerId = customerId;
+        this.httpClient = httpClient
+    }
+
+    async session(username: string, password: string): Promise<Session> {
+        const json = await this.httpClient.postJson<SignInResponse>('/UserProfile/SignIn', {
+            'APIKEY': this.apiKey,
+            'ClientSWVersion': 1,
+            'CustomerId': this.customerId,
+            'UserName': username,
+            'Password': password,
+        });
 
         if (json.ErrorCode !== 0) {
             throw new Error('Create Session Failed to authenticate');
         }
 
-        return new Session(this.apiKey, json.SessionId);
+        return new Session(this.apiKey, json.SessionId, this.httpClient);
     }
 }
 
 export class Session {
     private readonly apiKey: string;
     private readonly sessionId: string;
+    private readonly httpClient: HttpClient;
 
-    constructor(apiKey: string, sessionId: string) {
+    constructor(apiKey: string, sessionId: string, httpClient: HttpClient) {
         this.apiKey = apiKey;
         this.sessionId = sessionId;
+        this.httpClient = httpClient
     }
 
     async groups(): Promise<Group[]> {
@@ -50,25 +80,20 @@ export class Session {
         params.append('sessionid', this.sessionId);
         params.append('apiKey', this.apiKey);
 
-        const response = await fetch('https://owd5-OJ001-app.ojelectronics.com/api/Group/GroupContents?' + params.toString());
+        const response = await this.httpClient.get<GroupContentsResponse>('Group/GroupContents?' + params.toString());
 
-        // TODO: Check the status response
-
-        const json = await response.json() as GroupContentsResponse;
-
-        for (let groupContent of json.GroupContents) {
-            for (let thermostat of groupContent.Thermostats) {
-                console.log(thermostat)
-            }
+        if (response.ErrorCode !== 0) {
+            throw new Error(`Failed to get groups, with error code ${response.ErrorCode}`)
         }
 
-        return json.GroupContents.map(groupContent => new Group(this.apiKey, this.sessionId, groupContent));
+        return response.GroupContents.map(groupContent => new Group(this.apiKey, this.sessionId, this.httpClient, groupContent));
     }
 }
 
 export class Group {
     private readonly apiKey: string;
     private readonly sessionId: string;
+    private readonly httpClient: HttpClient;
     private groupContents: GroupContent;
 
     get id(): number {
@@ -95,48 +120,46 @@ export class Group {
         });
     }
 
-    constructor(apiKey: string, sessionId: string, groupContents: GroupContent) {
+    constructor(apiKey: string, sessionId: string, httpClient: HttpClient, groupContents: GroupContent) {
         this.apiKey = apiKey;
         this.sessionId = sessionId;
+        this.httpClient = httpClient;
         this.groupContents = groupContents;
     }
 
     async ecoMode() {
-        let updateGroupContentRequest = {
+        await this.postUpdate({
             APIKEY: this.apiKey,
             SetGroup: {
                 GroupId: this.groupContents.GroupId,
                 RegulationMode: RegulationMode.Eco,
             }
-        }
-        await this.postUpdate(updateGroupContentRequest);
+        });
     }
 
     async resumeSchedule() {
-        let updateGroupContentRequest = {
+        await this.postUpdate({
             APIKEY: this.apiKey,
             SetGroup: {
                 GroupId: this.groupContents.GroupId,
                 RegulationMode: RegulationMode.Schedule
             }
-        }
-        await this.postUpdate(updateGroupContentRequest);
+        });
     }
 
     async manualMode(targetTemperature: Temperature) {
-        let updateGroupContentRequest = {
+        await this.postUpdate({
             APIKEY: this.apiKey,
             SetGroup: {
                 GroupId: this.groupContents.GroupId,
                 RegulationMode: RegulationMode.Manual,
                 ManualModeSetpoint: targetTemperature.value * 100
             }
-        }
-        await this.postUpdate(updateGroupContentRequest);
+        });
     }
 
     async comfortMode(targetTemperature: Temperature, targetEndTime: Date) {
-        let updateGroupContentRequest = {
+        await this.postUpdate({
             APIKEY: this.apiKey,
             SetGroup: {
                 GroupId: this.groupContents.GroupId,
@@ -144,41 +167,34 @@ export class Group {
                 ComfortSetpoint: targetTemperature.value * 100,
                 ComfortEndTime: formatRFC3339(targetEndTime),
             }
-        }
-        await this.postUpdate(updateGroupContentRequest);
+        });
     }
 
     async boostMode() {
-        let updateGroupContentRequest = {
+        await this.postUpdate({
             APIKEY: this.apiKey,
             SetGroup: {
                 BoostEndTime: formatRFC3339(addHours(new Date(), 1)),
                 GroupId: this.groupContents.GroupId,
                 RegulationMode: RegulationMode.Boost,
             }
-        }
-        await this.postUpdate(updateGroupContentRequest);
+        });
     }
 
     private async postUpdate(updateGroupContentRequest: any) {
         const params = new URLSearchParams();
         params.append('sessionid', this.sessionId);
 
-        const response = await fetch('https://owd5-OJ001-app.ojelectronics.com/api/Group/UpdateGroup?' + params.toString(),
-            {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(updateGroupContentRequest)
-            });
+        const response = await this.httpClient.postJson<UpdateGroupResponse>('Group/UpdateGroup?' + params.toString(), updateGroupContentRequest);
 
-        const json = await response.json();
+        // TODO add a test for when the api sends an invalid http status code
 
-        if (json.ErrorCode !== 0) {
+        // TODO Add a test for this case too
+        if (response.ErrorCode !== 0) {
             throw new Error('Failed to update group');
         }
     }
 }
-
 
 export type Thermostat = {
     name: string;
@@ -240,6 +256,10 @@ type SignInResponse = {
 type GroupContentsResponse = {
     GroupContents: GroupContent[];
     ErrorCode: number;
+}
+
+type UpdateGroupResponse = {
+    ErrorCode: number
 }
 
 type GroupContent = {

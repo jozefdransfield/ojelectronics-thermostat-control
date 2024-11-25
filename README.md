@@ -26,7 +26,7 @@ const PASSWORD = '<your password>';
 
 const CUSTOMER_ID = 1;
 
-const api = new API(API_KEY, CUSTOMER_ID);
+const api = OJElectronics(API_KEY, CUSTOMER_ID);
 const session = await api.session(USERNAME, PASSWORD);
 ```
 ## Session Information
