@@ -56,6 +56,12 @@ export class Session {
 
         const json = await response.json() as GroupContentsResponse;
 
+        for (let groupContent of json.GroupContents) {
+            for (let thermostat of groupContent.Thermostats) {
+                console.log(thermostat)
+            }
+        }
+
         return json.GroupContents.map(groupContent => new Group(this.apiKey, this.sessionId, groupContent));
     }
 }
